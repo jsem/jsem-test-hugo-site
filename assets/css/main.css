@@ -164,7 +164,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); line-heigh
 .nav { display: flex; align-items: center; }
 .nav-list { display: flex; align-items: center; gap: .15rem; list-style: none; padding: 0; }
 .nav-link {
-  display: inline-block; padding: .5rem .65rem; border-radius: 9px;
+  display: inline-block; padding: .5rem .65rem; border-radius: 9px; white-space: nowrap;
   color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: .93rem;
 }
 .nav-link:hover { color: var(--brand-strong); background: var(--brand-soft); }
@@ -229,6 +229,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); line-heigh
 
 /* ---------- Areas ---------- */
 .area-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+.area-text .note { display: flex; align-items: flex-start; }
+.area-text .btn { margin-top: 1.25rem; }
 .area-suburbs .area-radius { color: var(--muted); margin-bottom: 1rem; }
 .suburb-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; }
 .suburb-list li { display: flex; align-items: center; gap: .5rem; font-weight: 600; color: var(--ink); }
@@ -317,7 +319,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); line-heigh
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .nav-toggle { display: inline-flex; }
   .nav-list {
     position: fixed; inset: var(--header-h) 0 auto 0;
