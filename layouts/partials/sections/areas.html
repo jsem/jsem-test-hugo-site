@@ -1,0 +1,22 @@
+{{- $a := hugo.Data.areas -}}
+<section class="section" id="areas">
+  <div class="container">
+    <div class="area-layout">
+      <div class="area-text">
+        <p class="eyebrow">{{ partial "icon.html" (dict "name" "map" "class" "icon icon-sm") }} Where we go</p>
+        <h2 class="section-title">{{ $a.heading }}</h2>
+        <p class="section-intro">{{ $a.intro }}</p>
+        <p class="note">{{ partial "icon.html" (dict "name" "phone" "class" "icon icon-sm") }} {{ $a.note }}</p>
+        <a class="btn btn-primary" href="tel:{{ site.Params.phoneLink }}">Call {{ site.Params.phone }}</a>
+      </div>
+      <div class="area-suburbs card-soft">
+        <p class="area-radius">Within <strong>{{ $a.radius }}</strong> of Pearcedale, including:</p>
+        <ul class="suburb-list">
+          {{ range $a.suburbs }}
+            <li>{{ partial "icon.html" (dict "name" "map" "class" "icon icon-sm") }} {{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

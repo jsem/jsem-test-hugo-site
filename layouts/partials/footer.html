@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="brand-mark">{{ partial "icon.html" (dict "name" "paw" "class" "brand-paw") }}</span>
+      <p class="footer-name">Pearcedale Prancing Paws</p>
+      <p class="footer-tagline">“{{ site.Params.tagline }}”</p>
+      <p class="footer-insured">{{ partial "icon.html" (dict "name" "shield" "class" "icon icon-sm") }} Fully insured</p>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading">Get in touch</h3>
+      <ul class="footer-list">
+        <li><a href="tel:{{ site.Params.phoneLink }}">{{ partial "icon.html" (dict "name" "phone" "class" "icon icon-sm") }} {{ site.Params.phone }}</a></li>
+        <li><a href="mailto:{{ site.Params.email }}">{{ partial "icon.html" (dict "name" "mail" "class" "icon icon-sm") }} {{ site.Params.email }}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading">Hours</h3>
+      <p>{{ partial "icon.html" (dict "name" "clock" "class" "icon icon-sm") }} {{ site.Params.hours }}</p>
+      <h3 class="footer-heading">Service area</h3>
+      <p>{{ partial "icon.html" (dict "name" "map" "class" "icon icon-sm") }} {{ site.Params.serviceArea }}</p>
+    </div>
+
+    <nav class="footer-col" aria-label="Footer">
+      <h3 class="footer-heading">Explore</h3>
+      <ul class="footer-list footer-links">
+        {{ range site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {{ now.Year }} Pearcedale Prancing Paws Mobile Dog Grooming. All rights reserved.</p>
+    {{ if or site.Params.facebook site.Params.instagram }}
+      <div class="footer-social">
+        {{ with site.Params.facebook }}<a href="{{ . }}" aria-label="Facebook" rel="noopener">{{ partial "icon.html" (dict "name" "facebook") }}</a>{{ end }}
+        {{ with site.Params.instagram }}<a href="{{ . }}" aria-label="Instagram" rel="noopener">{{ partial "icon.html" (dict "name" "instagram") }}</a>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</footer>

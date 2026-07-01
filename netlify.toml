@@ -1,0 +1,23 @@
+# Netlify build configuration.
+# The existing Netlify ↔ GitHub connection uses this to build on every push.
+
+[build]
+  command   = "hugo --gc --minify"
+  publish   = "public"
+
+[build.environment]
+  # Pin Hugo so local and Netlify builds match. Bump this deliberately.
+  HUGO_VERSION = "0.163.3"
+  # Hugo extended is required for asset pipeline / fingerprinting.
+  TZ = "Australia/Melbourne"
+
+# Long-cache fingerprinted assets (filenames change on content change).
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

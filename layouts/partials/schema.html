@@ -1,0 +1,35 @@
+{{- /* LocalBusiness structured data — helps local search (e.g. "Pearcedale dog grooming"). */ -}}
+{{- if .IsHome -}}
+{{- $areas := slice -}}
+{{- range hugo.Data.areas.suburbs -}}
+  {{- $areas = $areas | append (dict "@type" "City" "name" .) -}}
+{{- end -}}
+{{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "PetGroomer"
+    "name" site.Title
+    "description" site.Params.description
+    "url" site.BaseURL
+    "telephone" site.Params.phoneLink
+    "email" site.Params.email
+    "image" (printf "%simages/hero-scotties.jpg" site.BaseURL)
+    "priceRange" "$$"
+    "slogan" site.Params.tagline
+    "areaServed" $areas
+    "address" (dict
+      "@type" "PostalAddress"
+      "addressLocality" site.Params.suburb
+      "addressRegion" site.Params.state
+      "addressCountry" site.Params.country)
+    "geo" (dict
+      "@type" "GeoCoordinates"
+      "latitude" site.Params.latitude
+      "longitude" site.Params.longitude)
+    "openingHoursSpecification" (dict
+      "@type" "OpeningHoursSpecification"
+      "dayOfWeek" (slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday")
+      "opens" "08:00"
+      "closes" "14:00")
+-}}
+<script type="application/ld+json">{{ $schema }}</script>
+{{- end -}}

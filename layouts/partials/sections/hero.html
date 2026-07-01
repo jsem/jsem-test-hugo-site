@@ -1,0 +1,18 @@
+{{- $hero := .Params.hero -}}
+<section class="hero" {{ with $hero.image }}style="--hero-image: url('{{ . | relURL }}')"{{ end }}>
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <p class="hero-badge">{{ partial "icon.html" (dict "name" "van" "class" "icon icon-sm") }} Mobile — we come to you</p>
+    <h1 class="hero-heading">{{ $hero.heading }}</h1>
+    <p class="hero-tagline">“{{ site.Params.tagline }}”</p>
+    <p class="hero-sub">{{ $hero.subheading }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="tel:{{ site.Params.phoneLink }}">
+        {{ partial "icon.html" (dict "name" "phone" "class" "icon") }}
+        <span>Call {{ site.Params.phone }}</span>
+      </a>
+      <a class="btn btn-ghost btn-lg" href="#contact">Enquire now</a>
+      <a class="btn btn-link btn-lg" href="#services">View services →</a>
+    </div>
+  </div>
+</section>

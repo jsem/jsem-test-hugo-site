@@ -1,0 +1,18 @@
+{{- $g := hugo.Data.gallery -}}
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">{{ partial "icon.html" (dict "name" "paw" "class" "icon icon-sm") }} Gallery</p>
+      <h2 class="section-title">{{ $g.heading }}</h2>
+      <p class="section-intro">{{ $g.intro }}</p>
+    </div>
+    <div class="gallery-grid">
+      {{ range $g.items }}
+        <figure class="gallery-item">
+          <img src="{{ .image | relURL }}" alt="{{ .caption }}" loading="lazy" width="400" height="400">
+          {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+        </figure>
+      {{ end }}
+    </div>
+  </div>
+</section>

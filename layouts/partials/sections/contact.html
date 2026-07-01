@@ -1,0 +1,29 @@
+<section class="section section-contact" id="contact">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">{{ partial "icon.html" (dict "name" "mail" "class" "icon icon-sm") }} Contact us</p>
+      <h2 class="section-title">Book a groom or ask a question</h2>
+      <p class="section-intro">The best way to reach us is a quick call or email — we'd love to hear about your dog.</p>
+    </div>
+
+    <div class="contact-actions">
+      <a class="contact-action" href="tel:{{ site.Params.phoneLink }}">
+        <span class="contact-ic">{{ partial "icon.html" (dict "name" "phone" "class" "icon icon-lg") }}</span>
+        <span class="contact-label">Call us</span>
+        <strong class="contact-value">{{ site.Params.phone }}</strong>
+        <span class="contact-hint">Tap to call</span>
+      </a>
+      <a class="contact-action" href="mailto:{{ site.Params.email }}?subject=Grooming%20enquiry">
+        <span class="contact-ic">{{ partial "icon.html" (dict "name" "mail" "class" "icon icon-lg") }}</span>
+        <span class="contact-label">Email us</span>
+        <strong class="contact-value">{{ site.Params.email }}</strong>
+        <span class="contact-hint">Tap to email</span>
+      </a>
+    </div>
+
+    <div class="contact-meta">
+      <p>{{ partial "icon.html" (dict "name" "clock" "class" "icon icon-sm") }} {{ site.Params.hours }}</p>
+      <p>{{ partial "icon.html" (dict "name" "map" "class" "icon icon-sm") }} {{ site.Params.serviceArea }}</p>
+    </div>
+  </div>
+</section>

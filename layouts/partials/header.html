@@ -1,0 +1,31 @@
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} — home">
+      <span class="brand-mark">{{ partial "icon.html" (dict "name" "paw" "class" "brand-paw") }}</span>
+      <span class="brand-text">
+        <span class="brand-name">Prancing Paws</span>
+        <span class="brand-sub">Mobile Dog Grooming</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="nav-toggle-open">{{ partial "icon.html" (dict "name" "menu") }}</span>
+        <span class="nav-toggle-close">{{ partial "icon.html" (dict "name" "close") }}</span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <ul class="nav-list" id="primary-nav" data-nav-list>
+        {{ range site.Menus.main }}
+          <li><a class="nav-link" href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+        <li class="nav-cta">
+          <a class="btn btn-primary btn-sm" href="tel:{{ site.Params.phoneLink }}">
+            {{ partial "icon.html" (dict "name" "phone" "class" "icon icon-sm") }}
+            <span>{{ site.Params.phone }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

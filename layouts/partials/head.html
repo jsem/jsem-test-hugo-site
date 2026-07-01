@@ -1,0 +1,37 @@
+{{- $desc := .Description | default site.Params.description -}}
+{{- $title := cond .IsHome site.Title (printf "%s · %s" .Title site.Title) -}}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph / social share */}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="en_AU">
+{{- with resources.Get "images/hero-scotties.jpg" }}
+<meta property="og:image" content="{{ .Permalink }}">
+{{- end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#22303a">
+
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+
+{{/* Fonts — swap to self-hosted later if preferred */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+{{/* Styles — Hugo Pipes: minify + fingerprint for cache-busting */}}
+{{- with resources.Get "css/main.css" }}
+  {{- $css := . | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end }}
+
+{{/* Structured data for local SEO */}}
+{{ partial "schema.html" . }}

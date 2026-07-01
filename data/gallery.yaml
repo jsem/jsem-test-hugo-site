@@ -1,0 +1,19 @@
+# Gallery — Lisa to provide real photos.
+# Drop image files into static/images/gallery/ and list them here with a short caption.
+# Until real photos exist, the entries below point at placeholder images.
+
+heading: "Gallery"
+intro: "A little look at some of our happy, freshly-groomed friends."
+items:
+  - image: "/images/gallery/placeholder-1.svg"
+    caption: "Photo coming soon"
+  - image: "/images/gallery/placeholder-2.svg"
+    caption: "Photo coming soon"
+  - image: "/images/gallery/placeholder-3.svg"
+    caption: "Photo coming soon"
+  - image: "/images/gallery/placeholder-4.svg"
+    caption: "Photo coming soon"
+  - image: "/images/gallery/placeholder-5.svg"
+    caption: "Photo coming soon"
+  - image: "/images/gallery/placeholder-6.svg"
+    caption: "Photo coming soon"

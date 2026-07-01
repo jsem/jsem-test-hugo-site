@@ -1,0 +1,76 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  Pearcedale Prancing Paws — Hugo site configuration
+#
+#  Business facts live here under [params]. Change them in ONE place and they
+#  update everywhere on the site (header, footer, contact, SEO, schema).
+# ─────────────────────────────────────────────────────────────────────────────
+
+baseURL   = 'https://pearcedale-prancing-paws.netlify.app/'  # ← change to the real domain when live
+locale    = 'en-au'
+title     = 'Pearcedale Prancing Paws Mobile Dog Grooming'
+enableRobotsTXT = true
+
+[params]
+  tagline      = 'Happy dog, happy life.'
+  description  = 'Pearcedale Prancing Paws — relaxed, caring mobile dog grooming that comes to you across Pearcedale and within 25 km. Family run, 30 years experience, fully insured.'
+  shortName    = 'Prancing Paws'
+
+  # Contact — used by the header call button, contact section, footer & schema
+  phone        = '0411 016 237'
+  phoneLink    = '+61411016237'          # tel: link (E.164 format)
+  email        = 'Lizamcpherson53@gmail.com'
+
+  # Service area & hours
+  serviceArea  = 'Pearcedale & surrounds (within 25 km)'
+  hours        = 'Monday – Saturday: 8am – 2pm'
+  established   = '30 years'
+
+  # Geo (Pearcedale, VIC) — used for LocalBusiness schema
+  latitude     = '-38.2042'
+  longitude    = '145.2289'
+  suburb       = 'Pearcedale'
+  state        = 'VIC'
+  country      = 'Australia'
+
+  # Optional social links (leave blank to hide)
+  facebook     = ''
+  instagram    = ''
+
+# ─── Top navigation (single-page anchor links, in the order Lisa specified) ───
+[[menus.main]]
+  name = 'Our Services'
+  url  = '#services'
+  weight = 1
+[[menus.main]]
+  name = 'Areas We Service'
+  url  = '#areas'
+  weight = 2
+[[menus.main]]
+  name = 'Business Hours'
+  url  = '#hours'
+  weight = 3
+[[menus.main]]
+  name = 'About Us'
+  url  = '#about'
+  weight = 4
+[[menus.main]]
+  name = 'Gallery'
+  url  = '#gallery'
+  weight = 5
+[[menus.main]]
+  name = 'Reviews'
+  url  = '#reviews'
+  weight = 6
+[[menus.main]]
+  name = 'Contact Us'
+  url  = '#contact'
+  weight = 7
+
+[minify]
+  minifyOutput = true
+
+[markup.goldmark.renderer]
+  unsafe = true   # allow inline HTML in markdown content when needed
+
+[build]
+  writeStats = false

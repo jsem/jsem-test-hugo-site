@@ -1,0 +1,37 @@
+{{- /*
+  Inline SVG icons. Usage: {{ partial "icon.html" (dict "name" "phone" "class" "icon") }}
+  All icons use currentColor so they inherit text colour.
+*/ -}}
+{{- $name := .name -}}
+{{- $class := .class | default "icon" -}}
+{{- $attrs := printf `class=%q width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"` $class -}}
+{{- $paw := printf `class=%q width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"` $class -}}
+{{- if eq $name "phone" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+{{- else if eq $name "mail" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+{{- else if eq $name "clock" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+{{- else if eq $name "shield" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M12 3 4 6v6c0 4.5 3.4 7.9 8 9 4.6-1.1 8-4.5 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+{{- else if eq $name "leaf" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 16-10 0 8-4 16-11 17z"/><path d="M4 20c3-4 6-6 11-8"/></svg>
+{{- else if eq $name "van" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M1 6h11v9H1z"/><path d="M12 9h5l4 4v2h-9z"/><circle cx="6" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+{{- else if eq $name "map" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+{{- else if eq $name "star" -}}
+  <svg class="{{ $class }}" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+{{- else if eq $name "check" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="m20 6-11 11-5-5"/></svg>
+{{- else if eq $name "menu" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+{{- else if eq $name "close" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M18 6 6 18M6 6l12 12"/></svg>
+{{- else if eq $name "paw" -}}
+  <svg {{ $paw | safeHTMLAttr }}><circle cx="5.5" cy="10.5" r="1.9"/><circle cx="9.5" cy="6.5" r="1.9"/><circle cx="14.5" cy="6.5" r="1.9"/><circle cx="18.5" cy="10.5" r="1.9"/><path d="M12 11c2.5 0 4.6 1.7 5.3 3.9.6 1.9-.8 3.6-2.7 3.6-.9 0-1.7-.3-2.6-.3s-1.7.3-2.6.3c-1.9 0-3.3-1.7-2.7-3.6C7.4 12.7 9.5 11 12 11z"/></svg>
+{{- else if eq $name "facebook" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+{{- else if eq $name "instagram" -}}
+  <svg {{ $attrs | safeHTMLAttr }}><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+{{- end -}}

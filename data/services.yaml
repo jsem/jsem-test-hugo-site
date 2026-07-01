@@ -1,0 +1,82 @@
+# Grooming services. Add a `price:` value (e.g. "from $75") to any tier and it will
+# show instead of "Enquire for a quote". Prices weren't supplied in Lisa's brief.
+
+heading: "Our services"
+intro: "Every groom is tailored to your dog. Choose the level of pampering that suits them best."
+
+tiers:
+  - name: "Basic"
+    tagline: "A fresh, clean and happy pup."
+    featured: false
+    price: ""
+    includes:
+      - "Warm wash, towel & blow dried"
+      - "Deodorised"
+      - "Nails clipped"
+      - "Ears & eyes gently cleaned"
+      - "Doggy treat"
+
+  - name: "Classic"
+    tagline: "A wash plus a neat, tidy trim."
+    featured: true
+    price: ""
+    includes:
+      - "Warm wash, towel & blow dried"
+      - "Deodorised"
+      - "Nails clipped"
+      - "Ears & eyes gently cleaned"
+      - "Tidy up of the coat"
+      - "Face trimmed"
+      - "Paws trimmed"
+      - "Sanitary trim"
+      - "Flea treatment"
+      - "Doggy treat"
+
+  - name: "Deluxe — Full Groom"
+    tagline: "The complete makeover, clipped and styled."
+    featured: false
+    price: ""
+    includes:
+      - "Full clip and style"
+      - "Warm wash, towel & blow dried"
+      - "Deodorised"
+      - "Nails clipped"
+      - "Ears & eyes gently cleaned"
+      - "Tidy up of the coat"
+      - "Face trimmed"
+      - "Paws trimmed"
+      - "Sanitary trim"
+      - "Flea treatment"
+      - "Doggy treat"
+
+  - name: "Deluxe — De-shedding & Full Groom"
+    tagline: "Our top treatment for heavy-coated dogs."
+    featured: false
+    price: ""
+    includes:
+      - "De-shedding treatment"
+      - "Full clip and style"
+      - "Warm wash, towel & blow dried"
+      - "Deodorised"
+      - "Nails clipped"
+      - "Ears & eyes gently cleaned"
+      - "Tidy up of the coat"
+      - "Face trimmed"
+      - "Paws trimmed"
+      - "Sanitary trim"
+      - "Flea treatment"
+      - "Doggy treat"
+
+special_breeds:
+  heading: "Special breeds grooming"
+  intro: "We provide customised care and specialised grooming for specific breeds:"
+  breeds:
+    - "Scottish Terriers"
+    - "West Highland Terriers"
+    - "Cairn Terriers"
+    - "Australian Terriers"
+    - "Yorkshire Terriers"
+    - "Border Collies"
+    - "Schnauzers"
+
+surcharge_note: "Please note: difficult, aggressive or matted dogs will incur a surcharge."

@@ -1,0 +1,19 @@
+{{- $w := .Params.welcome -}}
+<section class="section section-welcome" id="welcome">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">{{ partial "icon.html" (dict "name" "paw" "class" "icon icon-sm") }} Welcome</p>
+      <h2 class="section-title">{{ $w.heading }}</h2>
+      <p class="section-intro">{{ $w.intro }}</p>
+    </div>
+    <ul class="feature-grid">
+      {{ range $w.points }}
+        <li class="feature-card">
+          <span class="feature-icon">{{ partial "icon.html" (dict "name" .icon "class" "icon icon-lg") }}</span>
+          <h3 class="feature-title">{{ .title }}</h3>
+          <p class="feature-text">{{ .text }}</p>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>

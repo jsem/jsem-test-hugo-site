@@ -1,0 +1,21 @@
+{{- $about := .Params.about -}}
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-media">
+        {{/* Replace with a real van/team photo at static/images/van.jpg (see ASSETS-TODO). */}}
+        <img class="about-image" src="{{ "images/van.svg" | relURL }}" alt="Pearcedale Prancing Paws mobile grooming van" loading="lazy" width="640" height="480">
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">{{ partial "icon.html" (dict "name" "paw" "class" "icon icon-sm") }} About us</p>
+        <h2 class="section-title">{{ $about.heading }}</h2>
+        <p>{{ $about.body }}</p>
+        <ul class="about-stats">
+          <li><strong>30 years</strong><span>of experience</span></li>
+          <li><strong>Award-winning</strong><span>show dogs</span></li>
+          <li><strong>Family run</strong><span>&amp; fully insured</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

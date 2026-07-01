@@ -1,0 +1,29 @@
+{{- $r := hugo.Data.reviews -}}
+<section class="section section-alt" id="reviews">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow">{{ partial "icon.html" (dict "name" "star" "class" "icon icon-sm") }} Customer reviews</p>
+      <h2 class="section-title">{{ $r.heading }}</h2>
+      <p class="section-intro">{{ $r.intro }}</p>
+    </div>
+
+    {{ if $r.items }}
+      <div class="review-grid">
+        {{ range $r.items }}
+          <blockquote class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">
+              {{ range seq 5 }}{{ partial "icon.html" (dict "name" "star" "class" "icon icon-sm star") }}{{ end }}
+            </div>
+            <p class="review-quote">“{{ .quote }}”</p>
+            <footer class="review-author">— {{ .name }}{{ with .suburb }}, {{ . }}{{ end }}</footer>
+          </blockquote>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="review-empty card-soft center">
+        <p>We're gathering reviews from our happy customers — check back soon!</p>
+        <p>Groomed with us? We'd love your feedback: <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+      </div>
+    {{ end }}
+  </div>
+</section>

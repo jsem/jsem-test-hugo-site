@@ -1,0 +1,10 @@
+heading: "Areas we service"
+intro: "Based in Pearcedale, we come to you across the suburbs within a 25 km radius."
+radius: "25 km"
+suburbs:
+  - "Pearcedale"
+  - "Cranbourne"
+  - "Hastings"
+  - "Tyabb"
+  - "Chelsea Heights"
+note: "Not sure if you're in range? Give us a call — we'd love to help."
