@@ -8,11 +8,32 @@
     </div>
     <div class="gallery-grid">
       {{ range $g.items }}
+        {{ $full := .full | default .image }}
         <figure class="gallery-item">
-          <img src="{{ .image | relURL }}" alt="{{ .caption }}" loading="lazy" width="400" height="400">
+          <a class="gallery-link" href="{{ $full | relURL }}" data-lb-item data-full="{{ $full | relURL }}" data-caption="{{ .caption }}" aria-label="View larger image{{ with .caption }}: {{ . }}{{ end }}">
+            <img src="{{ .image | relURL }}" alt="{{ .caption }}" loading="lazy" width="400" height="400">
+          </a>
           {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
         </figure>
       {{ end }}
     </div>
+  </div>
+
+  {{/* Lightbox overlay (enhanced by assets/js/gallery.js; degrades to plain image links). */}}
+  <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+    <p class="lightbox-count" data-lb-count></p>
+    <button class="lightbox-close" type="button" data-lb-close aria-label="Close viewer">
+      {{ partial "icon.html" (dict "name" "close") }}
+    </button>
+    <button class="lightbox-nav lightbox-prev" type="button" data-lb-prev aria-label="Previous image">
+      {{ partial "icon.html" (dict "name" "chevron-left") }}
+    </button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" data-lb-img src="" alt="">
+      <figcaption class="lightbox-caption" data-lb-caption></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" type="button" data-lb-next aria-label="Next image">
+      {{ partial "icon.html" (dict "name" "chevron-right") }}
+    </button>
   </div>
 </section>
