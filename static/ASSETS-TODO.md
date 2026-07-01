@@ -1,20 +1,15 @@
-# Images & content Lisa still needs to provide
+# Images & content still to provide
 
-Everything below currently shows a tasteful placeholder. To swap in the real thing,
-just drop a file at the path shown (keep the same filename), no code changes needed.
+Most branding is now in place (real van photo, brand colours and fonts sampled from the
+van livery). The items below still use placeholders. To swap the real thing in, drop a file
+at the path shown (keep the same filename), no code changes needed.
 
-| What | Drop the file here | Suggested size | Notes |
-|------|--------------------|----------------|-------|
-| **Hero background** | `static/images/hero-scotties.jpg` | 1600×900px, landscape | Posed, happy Scotties works well. After adding, change the one line in `content/_index.md` (`hero.image`) from `.svg` to `.jpg`. |
-| **Van / team photo** | `static/images/van.jpg` | 640×480px | Then change `images/van.svg` → `images/van.jpg` in `layouts/partials/sections/about.html`. |
-| **Business logo** | `static/images/logo.svg` (or `.png`) | any | Optional. The header currently uses a paw + text logo. |
-| **Gallery photos** | `static/images/gallery/` | ~800×800px, square | Add the files, then list them in `data/gallery.yaml` (image path + caption). Delete the placeholder entries. |
+| What | Status | Where |
+|------|--------|-------|
+| **Hero / van photo** | Done | `static/images/prancing-paws-van.jpg` (swap the file to update it) |
+| **Gallery photos** | Placeholder | Add ~800×800px files to `static/images/gallery/`, then list them in `data/gallery.yaml` (image path + caption). Delete the placeholder entries. |
+| **Customer reviews** | Placeholder | Add to `data/reviews.yaml` (quote, name, suburb). |
+| **Prices** | Optional | Add a `price:` to any tier in `data/services.yaml` (e.g. `price: "from $75"`). Left blank, each service shows “Enquire for a quote”. |
+| **Logo file** | Optional | The header uses a styled “Prancing Paws” wordmark. If Lisa has a transparent PNG/SVG logo, we can use it instead. |
 
-## Text still to come from Lisa
-
-- **Customer reviews** → add to `data/reviews.yaml` (quote, name, suburb).
-- **Prices** (optional) → add a `price:` to any tier in `data/services.yaml`
-  (e.g. `price: "from $75"`). Left blank, each service shows “Enquire for a quote”.
-
-Tip: photos load faster if you save them as JPG (photos) or keep SVG (graphics), and
-resize them to roughly the sizes above before uploading.
+Tip: resize photos to roughly the sizes above and save as JPG before uploading so pages stay fast.
