@@ -15,13 +15,13 @@
               {{ range seq 5 }}{{ partial "icon.html" (dict "name" "star" "class" "icon icon-sm star") }}{{ end }}
             </div>
             <p class="review-quote">“{{ .quote }}”</p>
-            <footer class="review-author">— {{ .name }}{{ with .suburb }}, {{ . }}{{ end }}</footer>
+            <footer class="review-author">{{ .name }}{{ with .suburb }}, {{ . }}{{ end }}</footer>
           </blockquote>
         {{ end }}
       </div>
     {{ else }}
       <div class="review-empty card-soft center">
-        <p>We're gathering reviews from our happy customers — check back soon!</p>
+        <p>We're gathering reviews from our happy customers. Check back soon!</p>
         <p>Groomed with us? We'd love your feedback: <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
       </div>
     {{ end }}

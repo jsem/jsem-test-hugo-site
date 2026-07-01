@@ -2,7 +2,7 @@
 <section class="hero" {{ with $hero.image }}style="--hero-image: url('{{ . | relURL }}')"{{ end }}>
   <div class="hero-overlay"></div>
   <div class="container hero-inner">
-    <p class="hero-badge">{{ partial "icon.html" (dict "name" "van" "class" "icon icon-sm") }} Mobile — we come to you</p>
+    <p class="hero-badge">{{ partial "icon.html" (dict "name" "van" "class" "icon icon-sm") }} We come to you</p>
     <h1 class="hero-heading">{{ $hero.heading }}</h1>
     <p class="hero-tagline">“{{ site.Params.tagline }}”</p>
     <p class="hero-sub">{{ $hero.subheading }}</p>

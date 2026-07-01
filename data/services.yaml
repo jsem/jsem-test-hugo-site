@@ -32,7 +32,7 @@ tiers:
       - "Flea treatment"
       - "Doggy treat"
 
-  - name: "Deluxe — Full Groom"
+  - name: "Deluxe Full Groom"
     tagline: "The complete makeover, clipped and styled."
     featured: false
     price: ""
@@ -49,7 +49,7 @@ tiers:
       - "Flea treatment"
       - "Doggy treat"
 
-  - name: "Deluxe — De-shedding & Full Groom"
+  - name: "Deluxe De-shedding & Full Groom"
     tagline: "Our top treatment for heavy-coated dogs."
     featured: false
     price: ""

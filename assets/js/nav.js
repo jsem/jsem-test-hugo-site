@@ -1,4 +1,4 @@
-// Mobile menu toggle + sticky-header shadow. Progressive enhancement only —
+// Mobile menu toggle + sticky-header shadow. Progressive enhancement only:
 // the site is fully usable without JS.
 (function () {
   "use strict";

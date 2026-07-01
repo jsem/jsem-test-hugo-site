@@ -4,7 +4,7 @@ title: "Mobile Dog Grooming in Pearcedale"
 
 hero:
   heading: "Mobile dog grooming that comes to you"
-  subheading: "Relaxed, caring grooming tailored to your dog — right in your driveway, across Pearcedale and within 25 km."
+  subheading: "Relaxed, caring grooming tailored to your dog, right in your driveway, across Pearcedale and within 25 km."
   # Placeholder background. Replace with a real photo: drop it at
   # static/images/hero-scotties.jpg and change this to "/images/hero-scotties.jpg".
   image: "/images/hero-scotties.svg"
@@ -16,7 +16,7 @@ welcome:
   points:
     - icon: "van"
       title: "We come to you"
-      text: "A fully-equipped mobile service — no stressful car trips or unfamiliar salons for your dog."
+      text: "A fully-equipped mobile service, so no stressful car trips or unfamiliar salons for your dog."
     - icon: "leaf"
       title: "Eco-friendly shampoo"
       text: "Australian-made, environmentally friendly shampoo and conditioner for your beloved dog."

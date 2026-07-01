@@ -1,31 +1,28 @@
-# ─────────────────────────────────────────────────────────────────────────────
-#  Pearcedale Prancing Paws — Hugo site configuration
-#
-#  Business facts live here under [params]. Change them in ONE place and they
-#  update everywhere on the site (header, footer, contact, SEO, schema).
-# ─────────────────────────────────────────────────────────────────────────────
+# Pearcedale Prancing Paws site configuration.
+# Business facts live here under [params]. Change them in one place and they
+# update everywhere on the site (header, footer, contact, SEO, schema).
 
-baseURL   = 'https://pearcedale-prancing-paws.netlify.app/'  # ← change to the real domain when live
+baseURL   = 'https://pearcedale-prancing-paws.netlify.app/'  # change to the real domain when live
 locale    = 'en-au'
 title     = 'Pearcedale Prancing Paws Mobile Dog Grooming'
 enableRobotsTXT = true
 
 [params]
   tagline      = 'Happy dog, happy life.'
-  description  = 'Pearcedale Prancing Paws — relaxed, caring mobile dog grooming that comes to you across Pearcedale and within 25 km. Family run, 30 years experience, fully insured.'
+  description  = 'Pearcedale Prancing Paws: relaxed, caring mobile dog grooming that comes to you across Pearcedale and within 25 km. Family run, 30 years experience, fully insured.'
   shortName    = 'Prancing Paws'
 
-  # Contact — used by the header call button, contact section, footer & schema
+  # Contact details, used by the header call button, contact section, footer and schema
   phone        = '0411 016 237'
   phoneLink    = '+61411016237'          # tel: link (E.164 format)
   email        = 'Lizamcpherson53@gmail.com'
 
-  # Service area & hours
+  # Service area and hours
   serviceArea  = 'Pearcedale & surrounds (within 25 km)'
-  hours        = 'Monday – Saturday: 8am – 2pm'
+  hours        = 'Monday to Saturday, 8am to 2pm'
   established   = '30 years'
 
-  # Geo (Pearcedale, VIC) — used for LocalBusiness schema
+  # Geo (Pearcedale, VIC), used for LocalBusiness schema
   latitude     = '-38.2042'
   longitude    = '145.2289'
   suburb       = 'Pearcedale'
@@ -36,7 +33,7 @@ enableRobotsTXT = true
   facebook     = ''
   instagram    = ''
 
-# ─── Top navigation (single-page anchor links, in the order Lisa specified) ───
+# Top navigation (single-page anchor links, in the order Lisa specified)
 [[menus.main]]
   name = 'Our Services'
   url  = '#services'
