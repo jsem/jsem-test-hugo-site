@@ -5,6 +5,8 @@
 heading: "Gallery"
 intro: "A little look at some of our happy, freshly-groomed friends."
 items:
+  - image: "/images/gallery/kirby.jpg"
+    caption: "Kirby the pup"
   - image: "/images/gallery/placeholder-1.svg"
     caption: "Photo coming soon"
   - image: "/images/gallery/placeholder-2.svg"
@@ -14,6 +16,4 @@ items:
   - image: "/images/gallery/placeholder-4.svg"
     caption: "Photo coming soon"
   - image: "/images/gallery/placeholder-5.svg"
-    caption: "Photo coming soon"
-  - image: "/images/gallery/placeholder-6.svg"
     caption: "Photo coming soon"
