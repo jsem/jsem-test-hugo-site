@@ -29,9 +29,11 @@ enableRobotsTXT = true
   state        = 'VIC'
   country      = 'Australia'
 
-  # Optional social links (leave blank to hide)
-  facebook     = ''
-  instagram    = ''
+  # Optional social / profile links (leave blank to hide). Full URLs.
+  # When filled in, these also feed the "sameAs" field in the LocalBusiness structured data.
+  facebook       = ''
+  instagram      = ''
+  googleBusiness = ''   # Google Business Profile URL, once it's set up
 
 # Top navigation (single-page anchor links). Labels are kept short on purpose so the
 # bar never wraps; the full wording still appears on each section heading.

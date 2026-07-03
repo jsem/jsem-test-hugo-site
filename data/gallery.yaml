@@ -1,21 +1,67 @@
-# Gallery: Lisa to provide real photos.
-# Drop image files into static/images/gallery/ and list them here with a short caption.
-# Optional `full:` points at a larger version shown in the lightbox (falls back to image).
-# Until real photos exist, the entries below point at placeholder images.
+# Gallery photos, shown in two groups (each renders as its own labelled row on the page).
+#
+# To add a photo: drop the file into static/images/gallery/ then add an item under the right group.
+#   image:   path under static/           (required)
+#   caption: short line under the photo, also used as the alt text for screen readers (required)
+#   w / h:   the photo's pixel width/height (optional). Only used to reserve the right space so the
+#            grid doesn't jump around while photos load. Omit them and it still works, just reflows
+#            a little. If you swap a photo, update these to match (or just delete them).
+#
+# everyday-labradoodle.jpg was cropped from _originals/gallery/regular/image000000.jpeg to remove
+# the old Jim's Dog Wash franchise branding on the van door (they've since rebranded).
+#
+# Full-size originals of everything live in _originals/gallery/ (that folder is NOT published).
 
 heading: "Gallery"
 intro: "A little look at some of our happy, freshly-groomed friends."
-items:
-  - image: "/images/gallery/kirby.jpg"
-    full: "/images/gallery/kirby-full.jpg"
-    caption: "Kirby the pup"
-  - image: "/images/gallery/placeholder-1.svg"
-    caption: "Photo coming soon"
-  - image: "/images/gallery/placeholder-2.svg"
-    caption: "Photo coming soon"
-  - image: "/images/gallery/placeholder-3.svg"
-    caption: "Photo coming soon"
-  - image: "/images/gallery/placeholder-4.svg"
-    caption: "Photo coming soon"
-  - image: "/images/gallery/placeholder-5.svg"
-    caption: "Photo coming soon"
+
+groups:
+  - name: "Everyday grooms"
+    intro: "Baths, tidy-ups and full grooms for the family dog."
+    items:
+      # Order is interleaved (tall / short / wide) so the masonry columns balance instead of
+      # stacking all the tall before/after shots into one long column.
+      - image: "/images/gallery/everyday-pom.jpg"
+        caption: "Tidy trim and clean-up"
+        w: 313
+        h: 564
+      - image: "/images/gallery/everyday-labradoodle.jpg"
+        caption: "Looking sharp after a full groom"
+        w: 712
+        h: 599
+      - image: "/images/gallery/everyday-maltese.jpg"
+        caption: "Freshly groomed and fluffy"
+        w: 562
+        h: 296
+      - image: "/images/gallery/everyday-beforeafter-cavalier.jpg"
+        caption: "Before & after full groom"
+        w: 224
+        h: 398
+      - image: "/images/gallery/everyday-beforeafter-1.jpg"
+        caption: "Before & after full groom"
+        w: 398
+        h: 398
+      - image: "/images/gallery/everyday-beforeafter-2.jpg"
+        caption: "Before & after: a matted coat made comfortable again"
+        w: 449
+        h: 798
+      - image: "/images/gallery/everyday-cavoodle.jpg"
+        caption: "Fresh full groom"
+        w: 599
+        h: 799
+
+  - name: "Specialised grooms"
+    intro: "Breed-standard styling, hand-stripping and show preparation, drawing on 30 years in the show ring."
+    items:
+      - image: "/images/gallery/show-handstripped-scottish-terrier.jpg"
+        caption: "Hand-stripped Scottish Terrier"
+        w: 797
+        h: 588
+      - image: "/images/gallery/show-beforeafter-scottish-terrier.jpg"
+        caption: "Before & after: clipped Scottish Terrier"
+        w: 520
+        h: 799
+      - image: "/images/gallery/show-clipped-westie.jpg"
+        caption: "Clipped West Highland White Terrier"
+        w: 799
+        h: 543

@@ -7,8 +7,8 @@ at the path shown (keep the same filename), no code changes needed.
 | What | Status | Where |
 |------|--------|-------|
 | **Hero / van photo** | Done | `static/images/prancing-paws-van.jpg` (swap the file to update it) |
-| **Gallery photos** | Placeholder | Add ~800×800px files to `static/images/gallery/`, then list them in `data/gallery.yaml` (image path + caption). Delete the placeholder entries. |
-| **Customer reviews** | Placeholder | Add to `data/reviews.yaml` (quote, name, suburb). |
+| **Gallery photos** | Done | Real photos supplied, optimised into `static/images/gallery/`, grouped into "Everyday grooms" and "Breed & show grooms" in `data/gallery.yaml`. Full-size originals kept in `_originals/gallery/` (not published). The van photo was cropped to remove the old Jim's franchise branding. |
+| **Customer reviews** | Sample data | `data/reviews.yaml` currently holds 6 TEST testimonials. Replace with genuine reviews before launch. |
 | **Prices** | Optional | Add a `price:` to any tier in `data/services.yaml` (e.g. `price: "from $75"`). Left blank, each service shows “Enquire for a quote”. |
 | **Logo file** | Optional | The header uses a styled “Prancing Paws” wordmark. If Lisa has a transparent PNG/SVG logo, we can use it instead. |
 

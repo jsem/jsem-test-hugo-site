@@ -13,7 +13,7 @@
           {{ if .featured }}<span class="service-badge">Most popular</span>{{ end }}
           <h3 class="service-name">{{ .name }}</h3>
           <p class="service-tagline">{{ .tagline }}</p>
-          <p class="service-price">{{ with .price }}{{ . }}{{ else }}<span class="price-enquire">Enquire for a quote</span>{{ end }}</p>
+          {{ with .price }}<p class="service-price">{{ . }}</p>{{ end }}
           <ul class="service-includes">
             {{ range .includes }}
               <li>{{ partial "icon.html" (dict "name" "check" "class" "icon icon-sm check") }} {{ . }}</li>

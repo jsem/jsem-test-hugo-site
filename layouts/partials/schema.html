@@ -4,9 +4,20 @@
 {{- range hugo.Data.areas.suburbs -}}
   {{- $areas = $areas | append (dict "@type" "City" "name" .) -}}
 {{- end -}}
+{{- /* Mobile service radius (25 km), alongside the named suburbs. */ -}}
+{{- $areas = $areas | append (dict
+    "@type" "GeoCircle"
+    "geoMidpoint" (dict "@type" "GeoCoordinates" "latitude" site.Params.latitude "longitude" site.Params.longitude)
+    "geoRadius" "25000") -}}
+{{- /* Profile links: only the ones that are actually filled in under [params]. */ -}}
+{{- $sameAs := slice -}}
+{{- with site.Params.facebook }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+{{- with site.Params.instagram }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+{{- with site.Params.googleBusiness }}{{ $sameAs = $sameAs | append . }}{{ end -}}
 {{- $schema := dict
     "@context" "https://schema.org"
     "@type" "PetGroomer"
+    "@id" (printf "%s#business" site.BaseURL)
     "name" site.Title
     "description" site.Params.description
     "url" site.BaseURL
@@ -31,5 +42,6 @@
       "opens" "08:00"
       "closes" "14:00")
 -}}
+{{- if gt (len $sameAs) 0 }}{{ $schema = merge $schema (dict "sameAs" $sameAs) }}{{ end -}}
 <script type="application/ld+json">{{ $schema }}</script>
 {{- end -}}

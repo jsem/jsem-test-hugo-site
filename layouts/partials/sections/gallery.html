@@ -6,17 +6,25 @@
       <h2 class="section-title">{{ $g.heading }}</h2>
       <p class="section-intro">{{ $g.intro }}</p>
     </div>
-    <div class="gallery-grid">
-      {{ range $g.items }}
-        {{ $full := .full | default .image }}
-        <figure class="gallery-item">
-          <a class="gallery-link" href="{{ $full | relURL }}" data-lb-item data-full="{{ $full | relURL }}" data-caption="{{ .caption }}" aria-label="View larger image{{ with .caption }}: {{ . }}{{ end }}">
-            <img src="{{ .image | relURL }}" alt="{{ .caption }}" loading="lazy" width="400" height="400">
-          </a>
-          {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
-        </figure>
-      {{ end }}
-    </div>
+    {{ range $g.groups }}
+      <div class="gallery-group">
+        <div class="gallery-group-head">
+          <h3 class="gallery-group-title">{{ .name }}</h3>
+          {{ with .intro }}<p class="gallery-group-intro">{{ . }}</p>{{ end }}
+        </div>
+        <div class="gallery-grid">
+          {{ range .items }}
+            {{ $full := .full | default .image }}
+            <figure class="gallery-item">
+              <a class="gallery-link" href="{{ $full | relURL }}" data-lb-item data-full="{{ $full | relURL }}" data-caption="{{ .caption }}" aria-label="View larger image{{ with .caption }}: {{ . }}{{ end }}">
+                <img src="{{ .image | relURL }}" alt="{{ .caption }}" loading="lazy"{{ with .w }} width="{{ . }}"{{ end }}{{ with .h }} height="{{ . }}"{{ end }}>
+              </a>
+              {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+            </figure>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
   </div>
 
   {{/* Lightbox overlay (enhanced by assets/js/gallery.js; degrades to plain image links). */}}
