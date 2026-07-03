@@ -13,7 +13,7 @@ welcome:
   heading: "Welcome to Prancing Paws"
   intro: "We provide a relaxed and happy service, tailored to suit you and your pet's needs and lifestyle."
   points:
-    - icon: "van"
+    - icon: "trailer"
       title: "We come to you"
       text: "A fully-equipped mobile service, so no stressful car trips or unfamiliar salons for your dog."
     - icon: "leaf"
