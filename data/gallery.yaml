@@ -33,6 +33,10 @@ groups:
         caption: "Freshly groomed and fluffy"
         w: 562
         h: 296
+      - image: "/images/gallery/everyday-beforeafter-3.jpg"
+        caption: "Before & after: brushed out and tidied up"
+        w: 900
+        h: 1600
       - image: "/images/gallery/everyday-beforeafter-cavalier.jpg"
         caption: "Before & after full groom"
         w: 224
