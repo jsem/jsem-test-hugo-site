@@ -1,27 +1,6 @@
 # Customer reviews.
-# NOTE: the entries below are SAMPLE / TEST testimonials for design purposes only.
-# Replace them with genuine customer reviews before the site goes live — publishing made-up
-# reviews on a real business can be misleading (and breaches ACCC rules).
 # Format per entry: quote, name, (optional) suburb. Empty list shows a friendly placeholder.
 
 heading: "Customer reviews"
 intro: "See what our happy customers say about us."
 items:
-  - quote: "The mobile service is a game changer. No more stressful car trips for our old boy, and he comes home looking and smelling wonderful every time."
-    name: "Rebecca"
-    suburb: "Pearcedale"
-  - quote: "Our Scottie can be a real handful, but they were so patient and gentle with her. The best groom she's ever had."
-    name: "David & Jen"
-    suburb: "Tyabb"
-  - quote: "So convenient having them come to us. Lovely to deal with, and my two always come out happy with their little bandanas on."
-    name: "Sarah"
-    suburb: "Cranbourne"
-  - quote: "My girl has sensitive skin and the shampoo they use has made such a difference. No more itching and her coat looks beautiful."
-    name: "Marie"
-    suburb: "Hastings"
-  - quote: "Friendly, professional and always on time. Booking is easy and nothing is ever too much trouble. Couldn't recommend them more."
-    name: "Tom"
-    suburb: "Chelsea Heights"
-  - quote: "Wouldn't take our pup anywhere else now. You can tell they genuinely love dogs."
-    name: "Priya"
-    suburb: "Pearcedale"
