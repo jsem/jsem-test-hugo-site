@@ -274,6 +274,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); line-heigh
 .review-author { color: var(--muted); font-weight: 700; margin-top: 1rem; font-style: normal; }
 .review-empty { max-width: 40rem; margin-inline: auto; }
 .review-empty p + p { margin-top: .5rem; color: var(--muted); }
+.review-cta { margin-top: 2rem; }
 
 /* ---------- Contact ---------- */
 .contact-actions { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); max-width: 46rem; margin-inline: auto; }

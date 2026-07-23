@@ -25,5 +25,14 @@
         <p>Groomed with us? We'd love your feedback: <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
       </div>
     {{ end }}
+
+    {{ with site.Params.googleReview }}
+      <div class="review-cta center">
+        <a class="btn btn-primary" href="{{ . }}" target="_blank" rel="noopener">
+          {{ partial "icon.html" (dict "name" "star" "class" "icon icon-sm") }}
+          <span>Leave us a Google review</span>
+        </a>
+      </div>
+    {{ end }}
   </div>
 </section>

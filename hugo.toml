@@ -2,7 +2,7 @@
 # Business facts live here under [params]. Change them in one place and they
 # update everywhere on the site (header, footer, contact, SEO, schema).
 
-baseURL   = 'https://pearcedale-prancing-paws.netlify.app/'  # change to the real domain when live
+baseURL   = 'https://pearcedaleprancingpaws.com.au/'  # change to the real domain when live
 locale    = 'en-au'
 title     = 'Pearcedale Prancing Paws Mobile Dog Grooming'
 enableRobotsTXT = true
@@ -33,7 +33,10 @@ enableRobotsTXT = true
   # When filled in, these also feed the "sameAs" field in the LocalBusiness structured data.
   facebook       = ''
   instagram      = ''
-  googleBusiness = ''   # Google Business Profile URL, once it's set up
+  googleBusiness = 'https://maps.app.goo.gl/Zao2nyTHNsFcuvEC7'   # Google Business Profile — feeds schema "sameAs"
+
+  # Direct Google "leave a review" link. Powers the review button in the reviews section.
+  googleReview   = 'https://g.page/r/CaABWYXR08RNEAI/review'
 
 # Top navigation (single-page anchor links). Labels are kept short on purpose so the
 # bar never wraps; the full wording still appears on each section heading.
