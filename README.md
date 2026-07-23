@@ -38,26 +38,15 @@ Everything editable is text - no need to touch the HTML/CSS for day-to-day updat
 | Colours & fonts (design tokens) | top of `assets/css/main.css` (`:root`) |
 | Navigation menu items | `hugo.toml` -> `[[menus.main]]` |
 
-**Photos & assets Lisa still owes** are listed in [`static/ASSETS-TODO.md`](static/ASSETS-TODO.md).
-
 ---
 
 ## Deploying
 
 Netlify is already connected to this GitHub repo. Push to `main` and Netlify runs
-`hugo --gc --minify` and publishes `public/`. Change the live domain in `hugo.toml` (`baseURL`)
-when the real domain is ready.
+`hugo --gc --minify` and publishes `public/`. The live domain is set in `hugo.toml` (`baseURL`).
 
 ### Contact
 
 There's no contact form by design - the site directs enquiries to **call or email** directly.
 Phone and email are set in `hugo.toml` -> `[params]`; the Contact section and header button use
 `tel:` and `mailto:` links.
-
----
-
-## Letting Lisa edit content herself (future step)
-
-The content is structured (front-matter + `data/*.yaml`) so a git-based CMS can be added
-later with **no refactor** - planned: **Sveltia CMS** at `/admin` with GitHub login. Not built
-yet; ask to wire it up when you're ready.

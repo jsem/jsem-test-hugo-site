@@ -2,7 +2,7 @@
 # Business facts live here under [params]. Change them in one place and they
 # update everywhere on the site (header, footer, contact, SEO, schema).
 
-baseURL   = 'https://pearcedaleprancingpaws.com.au/'  # change to the real domain when live
+baseURL   = 'https://pearcedaleprancingpaws.com.au/'
 locale    = 'en-au'
 title     = 'Pearcedale Prancing Paws Mobile Dog Grooming'
 enableRobotsTXT = true
