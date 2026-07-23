@@ -5,6 +5,29 @@
    site, edit the DESIGN TOKENS below.
    ============================================================================ */
 
+/* ---------- Self-hosted fonts (latin subset; Baloo 2 & Nunito are variable) ---------- */
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/baloo2.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/nunito.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/pacifico.woff2") format("woff2");
+}
+
 :root {
   /* ---- Brand colours (sampled from the van) ---- */
   --aqua:        #78cfe8;   /* van body                     */

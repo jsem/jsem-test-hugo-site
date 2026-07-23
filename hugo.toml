@@ -6,6 +6,9 @@ baseURL   = 'https://pearcedaleprancingpaws.com.au/'  # change to the real domai
 locale    = 'en-au'
 title     = 'Pearcedale Prancing Paws Mobile Dog Grooming'
 enableRobotsTXT = true
+# One-page site with no blog — don't generate empty /tags/ and /categories/
+# list pages. Keeps thin pages out of the sitemap and off Google's radar.
+disableKinds = ['taxonomy', 'term']
 
 [params]
   tagline      = 'Happy dog, happy life.'

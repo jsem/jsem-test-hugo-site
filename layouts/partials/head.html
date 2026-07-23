@@ -33,10 +33,9 @@
 
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 
-{{/* Fonts: swap to self-hosted later if preferred */}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+{{/* Fonts: self-hosted (see @font-face in main.css). Preload the two primary text faces. */}}
+<link rel="preload" as="font" type="font/woff2" href="{{ "fonts/nunito.woff2" | relURL }}" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="{{ "fonts/baloo2.woff2" | relURL }}" crossorigin>
 
 {{/* Styles via Hugo Pipes: minify + fingerprint for cache-busting */}}
 {{- with resources.Get "css/main.css" }}
