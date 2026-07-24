@@ -6,13 +6,16 @@ baseURL   = 'https://pearcedaleprancingpaws.com.au/'
 locale    = 'en-au'
 title     = 'Pearcedale Prancing Paws Mobile Dog Grooming'
 enableRobotsTXT = true
-# One-page site with no blog — don't generate empty /tags/ and /categories/
+# One-page site with no blog, don't generate empty /tags/ and /categories/
 # list pages. Keeps thin pages out of the sitemap and off Google's radar.
 disableKinds = ['taxonomy', 'term']
 
 [params]
   tagline      = 'Happy dog, happy life.'
-  description  = 'Pearcedale Prancing Paws: relaxed, caring mobile dog grooming that comes to you across Pearcedale and within 25 km. Family run, 30 years experience, fully insured.'
+  # The bold name Google shows above the search result. Kept short on purpose;
+  # the full site title is too long to work as a site name.
+  siteName     = 'Pearcedale Prancing Paws'
+  description  = 'Relaxed, caring mobile dog grooming that comes to you across Pearcedale and within 25 km. Family run, 30 years experience, fully insured.'
   shortName    = 'Prancing Paws'
 
   # Contact details, used by the header call button, contact section, footer and schema
@@ -36,7 +39,7 @@ disableKinds = ['taxonomy', 'term']
   # When filled in, these also feed the "sameAs" field in the LocalBusiness structured data.
   facebook       = ''
   instagram      = ''
-  googleBusiness = 'https://maps.app.goo.gl/Zao2nyTHNsFcuvEC7'   # Google Business Profile — feeds schema "sameAs"
+  googleBusiness = 'https://maps.app.goo.gl/Zao2nyTHNsFcuvEC7'   # Google Business Profile, feeds schema "sameAs"
 
   # Direct Google "leave a review" link. Powers the review button in the reviews section.
   googleReview   = 'https://g.page/r/CaABWYXR08RNEAI/review'

@@ -6,7 +6,9 @@
       <h1 class="hero-heading">{{ $hero.heading }}</h1>
       <p class="hero-tagline">{{ site.Params.tagline }}</p>
       <p class="hero-sub">{{ $hero.subheading }}</p>
-      <div class="hero-actions">
+      {{/* data-nosnippet keeps the button labels out of Google's search snippet.
+           Without it the labels get swept in as prose and the result reads */}}
+      <div class="hero-actions" data-nosnippet>
         <a class="btn btn-primary btn-lg" href="tel:{{ site.Params.phoneLink }}">
           {{ partial "icon.html" (dict "name" "phone" "class" "icon") }}
           <span>Call {{ site.Params.phone }}</span>

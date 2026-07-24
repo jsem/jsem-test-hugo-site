@@ -1,5 +1,8 @@
 {{- $desc := .Description | default site.Params.description -}}
 {{- $title := cond .IsHome site.Title (printf "%s · %s" .Title site.Title) -}}
+{{/* Short, human site name for the bold line above the result in Google. The full
+     site.Title is the page title; it's too long to work as a site name. */}}
+{{- $siteName := site.Params.siteName | default site.Title -}}
 {{- $ogImage := "images/prancing-paws-van.jpg" | absURL -}}
 {{- $ogImageAlt := "The Pearcedale Prancing Paws mobile dog grooming van" -}}
 
@@ -16,7 +19,7 @@
 
 {{/* Open Graph / social share */}}
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:site_name" content="{{ $siteName }}">
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ .Permalink }}">
@@ -31,7 +34,14 @@
 <meta name="twitter:image:alt" content="{{ $ogImageAlt }}">
 <meta name="theme-color" content="#6748a6">
 
+{{/* Favicons. Google Search only reliably picks up a raster icon, and an SVG on
+     its own tends to leave the generic globe in results, so a real .ico at the
+     site root and a 96px PNG are declared alongside it. Browsers that understand
+     sizes="any" still prefer the crisp SVG. */}}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+<link rel="icon" href="{{ "favicon-96.png" | relURL }}" type="image/png" sizes="96x96">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 
 {{/* Fonts: self-hosted (see @font-face in main.css). Preload the two primary text faces. */}}
 <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/nunito.woff2" | relURL }}" crossorigin>

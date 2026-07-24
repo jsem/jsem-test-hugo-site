@@ -44,4 +44,15 @@
 -}}
 {{- if gt (len $sameAs) 0 }}{{ $schema = merge $schema (dict "sameAs" $sameAs) }}{{ end -}}
 <script type="application/ld+json">{{ $schema }}</script>
+{{- /* WebSite node. This is what Google reads to decide the site name shown above
+       the search result, instead of falling back to the bare domain. */ -}}
+{{- $website := dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "@id" (printf "%s#website" site.BaseURL)
+    "name" (site.Params.siteName | default site.Title)
+    "alternateName" site.Params.shortName
+    "url" site.BaseURL
+-}}
+<script type="application/ld+json">{{ $website }}</script>
 {{- end -}}

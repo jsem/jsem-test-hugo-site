@@ -22,7 +22,7 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Self-hosted fonts are immutable — cache hard.
+# Self-hosted fonts are immutable, cache hard.
 [[headers]]
   for = "/fonts/*"
   [headers.values]
